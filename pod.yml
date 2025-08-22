@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liana-quest
+spec:
+  containers:
+    - name: liana-quest
+      image: frohrlich/liana-quest
+      envFrom:
+      - configMapRef:
+          name: liana-quest-configmap
