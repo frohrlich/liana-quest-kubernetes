@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liana-quest-deployment
+spec:
+  selector:
+    matchLabels:
+      app: liana-quest
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: liana-quest
+    spec:
+      containers:
+      - name: liana-quest
+        image: frohrlich/liana-quest:latest
+        envFrom:
+        - configMapRef:
+            name: liana-quest-configmap
+        - secretRef:
+            name: liana-quest-secrets

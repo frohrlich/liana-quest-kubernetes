@@ -4,9 +4,5 @@ metadata:
   name: liana-quest-configmap
 data:
   MONGO_CONNECTION_URL: mongodb://liana-quest-database-service.default.svc.cluster.local:27017
-  TOKEN_SECRET: vouTALvOrdQK7aDEir6pNw
-  REFRESH_TOKEN_SECRET: d68Hixtw3HdnceZuigZ5xw
   PORT: '8080'
-  EMAIL: example@email.com
-  PASSWORD: password
   EMAIL_PROVIDER: gmail
